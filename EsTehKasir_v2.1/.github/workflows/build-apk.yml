@@ -25,11 +25,10 @@ jobs:
           gradle-version: "8.10"
 
       - name: Build APK
-        working-directory: EsTehKasir_v2.1
         run: gradle assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: EsTehKasir-v2.1
-          path: EsTehKasir_v2.1/app/build/outputs/apk/debug/*.apk
+          path: app/build/outputs/apk/debug/*.apk
